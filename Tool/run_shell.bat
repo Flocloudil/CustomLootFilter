@@ -1,2 +1,0 @@
-customlootfilter.sh
-close

@@ -9988,7 +9988,7 @@ done
 echo
 #echo "Neuer Filter: $part1 ${selected[*]} $part2"
 # Datei für die Ausgabe
-output_file="../../CustomLootFilter_v1.filter"
+output_file="../../CustomLootFilter_v1.filter" # Datei im Path of Exile Root Ordner ablegen
 
 # Neue Datei erstellen
 > "$output_file"
