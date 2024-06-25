@@ -9988,7 +9988,7 @@ done
 echo
 #echo "Neuer Filter: $part1 ${selected[*]} $part2"
 # Datei für die Ausgabe
-output_file="output.filter"
+output_file="CustomLootFilter_v1.filter"
 
 # Neue Datei erstellen
 > "$output_file"
