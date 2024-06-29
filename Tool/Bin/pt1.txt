@@ -1,0 +1,228 @@
+#===============================================================================================================
+         # NeverSink's Indepth Loot Filter - for Path of Exile
+         #===============================================================================================================
+         # VERSION:  8.14.4
+         # TYPE:     1-REGULAR
+         # STYLE:    DEFAULT
+         # AUTHOR:   NeverSink
+         # BUILDNOTES: Filter generated with NeverSink's FilterpolishZ and the domainlanguage Exo.
+         #
+         #------------------------------------
+         # LINKS TO LATEST VERSION AND FILTER EDITOR
+         #------------------------------------
+         #
+         # EDIT/CUSTOMIZE FILTER ON: 	https://www.FilterBlade.xyz
+         # GET THE LATEST VERSION ON: 	https://www.FilterBlade.xyz or https://github.com/NeverSinkDev/NeverSink-Filter
+         #
+         #------------------------------------
+         # INSTALLATION / UPDATE :
+         #------------------------------------
+         #
+         # 0) It's recommended to check for updates once a month or at least before new leagues, to receive economy finetuning and new features!
+         # 1) Paste this file into the following folder: %userprofile%/Documents/My Games/Path of Exile
+         # 2) INGAME: Escape -> Options -> UI -> Scroll down -> Select the filter from the Dropdown box
+         #
+         #------------------------------------
+         # AUTO-UPDATER SERVICE AND SUPPORT THE DEVELOPMENT
+         #------------------------------------
+         #
+         # Patreon supporters get access to the FilterBlade Auto-Updater that combines 100% automated updates with custom styles and your customizations!
+         # It's a great way to support us and get something in return and it helps us on our journey of making our own company and potentially game. Thank you
+         # Learn more about the feature here: https://www.youtube.com/watch?v=i8RJx0s0zsA
+         #
+         # PATREON:               		https://www.patreon.com/Neversink
+         # OTHER:                        https://www.filterblade.xyz/About
+         #
+         #------------------------------------
+         # CONTACT - if you want to get notifications about updates or just get in touch:
+         #------------------------------------
+         # For feedback, questions and suggestions please join our discord!
+         #
+         # DISCORD: https://discord.gg/mye6xhF
+         # TWITTER: @NeverSinkDev
+         # TWITCH:  https://www.twitch.tv/neversink
+         # GITHUB:  NeverSinkDev
+         # FORUM:   https://goo.gl/oQn4EN
+         
+         #===============================================================================================================
+         # [WELCOME] TABLE OF CONTENTS + QUICKJUMP TABLE
+         #===============================================================================================================
+         # [[0100]] OVERRIDE AREA 1 - Override ALL rules here
+         # [[0100]] Global overriding rules
+         # [[0200]] High tier influenced items
+         #   [0201] Influenced Maps
+         #   [0202] Common Tier - T1
+         #   [0203] Specialised Tier - T1
+         #   [0204] Common Tier - T2
+         #   [0205] Specialised Tier - T2
+         #   [0206] Remaining
+         # [[0300]] ELDRITCH ITEMS
+         # [[0400]] Exotic Bases
+         # [[0500]] IDENTIFIED MOD FILTERING - COMBINATIONS
+         #   [0501] ID Mod exceptions - override id mod matching section
+         #   [0502] Physical
+         #   [0503] Elemental
+         #   [0504] Blade Blast Daggers
+         #   [0505] Gembased
+         #   [0506] Caster
+         #   [0507] Spellslinger
+         #   [0508] Helmets
+         #   [0509] Boots
+         #   [0510] Gloves
+         #   [0511] Shields
+         #   [0512] Amulets
+         #   [0513] Rings
+         #   [0514] Quivers
+         #   [0515] Body Armours
+         #   [0516] Belts
+         #   [0517] Jewels
+         # [[0600]] IDENTIFIED MOD FILTERING - SINGLE MODS
+         #   [0601] Top Value
+         #   [0602] Uncorrupted Mods
+         # [[0700]] IDENTIFIED MOD - CORRUPTED ITEMS
+         # [[0800]] Exotic Mods Filtering
+         #   [0801] Veiled/Betrayal - low prio veiled items
+         #   [0802] Incursion/Temple Mods
+         #   [0803] Necropolis
+         #   [0804] Bestiary
+         #   [0805] Other
+         # [[0900]] Exotic Item Classes
+         #   [0901] Voidstones
+         #   [0902] Trinkets
+         #   [0903] Secret Society Equipment
+         #   [0904] Pieces
+         #   [0905] Affliction
+         #   [0906] Craftable Invitations
+         #   [0907] Relics
+         # [[1000]] Exotic Item Variations
+         #   [1001] Double Corruptions
+         #   [1002] Specific Single Corruptions
+         #   [1003] Abyss Jeweled Rares
+         #   [1004] Synthesised
+         #   [1005] Fractured
+         #   [1006] Enchanted
+         #   [1007] Crucible
+         # [[1100]] Recipes and 5links
+         #   [1101] Link Based
+         # [[1200]] High Level Crafting Bases
+         #   [1201] Expensive Atlas 86 Bases - matched by economy
+         #   [1202] Perfection-Based-Filtering
+         #   [1203] RGB Endgame
+         #   [1204] ILVL 86
+         #   [1205] ILVL 84
+         #   [1206] ILVL ANY
+         #   [1207] Early Endgame Crafting projects
+         #   [1208] Chisel Recipes
+         # [[1300]] Chancing Bases
+         # [[1400]] Endgame Flasks
+         #   [1401] Endgame Flasks
+         #   [1402] Quality High
+         #   [1403] Utility OR quality flasks
+         #   [1404] Quality Low
+         #   [1405] Early mapping life/mana/utility flasks
+         # [[1500]] Misc Rules
+         # [[1600]] Hide Layer 1 - Normal and Magic Endgame Gear
+         # [[1700]] Rare Item Decorators
+         # [[1800]] Endgame - Rare - Exotic Corrupted Items
+         # [[1900]] Endgame - Rare - Accessoires
+         # [[2000]] Endgame - Conditional Hide Layers
+         # [[2100]] Endgame - Rare - Accessoires
+         # [[2200]] Endgame - Rare - Gear - T1 - handpicked
+         # [[2300]] Endgame - Rare - Gear - T2 - handpicked
+         # [[2400]] Endgame - Rare - Gear - T2 - handpicked
+         # [[2500]] Endgame - Rare - Gear - T3 - subpar bases
+         # [[2600]] Endgame - Rare - Gear - T4 - rest
+         # [[2700]] Hide Layer 2 - Rare Gear
+         # [[2800]] Jewels
+         #   [2801] Special Cases
+         #   [2802] Leveling Exceptions
+         #   [2803] Abyss Jewels
+         #   [2804] Generic Jewels
+         #   [2805] Cluster Jewels: Eco-Based-Large
+         #   [2806] Cluster Jewels: Random
+         # [[2900]] Heist Gear
+         #   [2901] Heist Cloak
+         #   [2902] Heist Brooch
+         #   [2903] Heist Gear
+         #   [2904] Heist Tool
+         # [[3000]] Gem Tierlists
+         #   [3001] Exceptional Gems - Awakened and AltQuality
+         #   [3002] Exceptional Gems - Special gems
+         #   [3003] High Quality and Leveled Gems
+         # [[3100]] REPLICA UNIQUES
+         # [[3200]] Special Maps
+         #   [3201] Unique Maps
+         #   [3202] T17 maps
+         #   [3203] Blighted maps
+         #   [3204] Delirium/Blight/Enchanted Maps!
+         # [[3300]] Normal Map Progression
+         #   [3301] Generic Decorators
+         #   [3302] Map progression
+         # [[3400]] Pseudo-Map-Items
+         # [[3500]] Fragments
+         #   [3501] Exceptions
+         #   [3502] Scarabs
+         #   [3503] Regular Fragment Tiering
+         # [[3600]] Currency - Exceptions - Leveling Currencies
+         # [[3700]] Currency - Exceptions - Stacked Currency
+         #   [3701] Supplies: High Stacking
+         #   [3702] Supplies: Low Stacking
+         #   [3703] Supplies: Portal Stacking
+         #   [3704] Supplies: Wisdom Stacking
+         #   [3705] Stacked Currencies: 6x
+         #   [3706] Stacked Currencies: 3x
+         #   [3707] Heist Coins
+         # [[3800]] Currency - Regular Currency Tiering
+         # [[3900]] Currency - SPECIAL
+         #   [3901] Incursion - Vials
+         #   [3902] Delirum Orbs
+         #   [3903] Delve - Resonators
+         #   [3904] Delve - Fossils
+         #   [3905] Blight - Oils
+         #   [3906] Essences
+         #   [3907] Incubators
+         #   [3908] Trial of the Ancestors
+         #   [3909] Others
+         # [[4000]] Currency - Splinters
+         #   [4001] Breach and Legion Splinters - stacked
+         #   [4002] Breach and Legion Splinters - single
+         #   [4003] Simulacrum Splinters
+         # [[4100]] Divination Cards
+         # [[4200]] Remaining Currency
+         # [[4300]] Questlike-Items1 (override uniques)
+         # [[4400]] Uniques
+         #   [4401] Exceptions #1
+         #   [4402] Tier 1 and 2 uniques
+         #   [4403] Exceptions #2
+         #   [4404] Multi-Unique bases.
+         #   [4405] Low tier exceptions
+         #   [4406] Tier 3 uniques 
+         #   [4407] Tier 4 uniques
+         # [[4500]] Misc Map Items
+         # [[4600]] Questlike-Items2
+         # [[4700]] Hide outdated leveling flasks
+         # [[4800]] Leveling - Flasks
+         #   [4801] Utility Flasks
+         #   [4802] Hybrid flasks
+         #   [4803] Life flasks
+         #   [4804] Mana flasks
+         # [[4900]] Leveling - Rules
+         #   [4901] Links and Sockets
+         #   [4902] Rares - Decorators
+         #   [4903] Rares - Universal
+         #   [4904] Rares - Caster
+         #   [4905] Rares - Archer
+         #   [4906] Rares - Melee
+         # [[5000]] Leveling - Useful magic and normal items
+         #   [5001] Purpose Picked Items
+         #   [5002] Normals
+         #   [5003] Weapon Progression
+         #   [5004] Remaining Magics
+         #   [5005] Hide All known Section
+         #   [5006] Show All unknown Section
+         
+         #===============================================================================================================
+         # [[0100]] Global overriding rules
+         #===============================================================================================================
+         # !! Waypoint c0.alpha \"All Rules - Highest priority - DANGER ZONE\"
+         
