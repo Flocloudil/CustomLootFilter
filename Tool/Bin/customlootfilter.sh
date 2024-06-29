@@ -6,21 +6,32 @@ part1=$(cat pt1.txt)
 # Zweiter Teil des Filters
 part2=$(cat pt2.txt)
 
-# Liste der Einträge 
-entries=(
-"   Sapphire Rings,"        # 1
-"   Ruby Rings,"            # 2
-"   Evasion Body Armours,"  # 3
-"   Evasion Gloves,"        # 4
-"   Evasion Boots,"         # 5
-"   Evasion Helmets,"       # 6
-"   Armour Body Armours,"   # 7
-"   Armour Gloves,"         # 8
-"   Armour Boots,"          # 9
-"  Armour Helmets,"         # 10
-#" ..."                      # 100 # Platzhalter
-#"..."                       # 1000 # Platzhalter
-)
+## Liste der Einträge 
+#entries=(
+#"   Sapphire Rings,"        # 1
+#"   Ruby Rings,"            # 2
+#"   Evasion Body Armours,"  # 3
+#"   Evasion Gloves,"        # 4
+#"   Evasion Boots,"         # 5
+#"   Evasion Helmets,"       # 6
+#"   Armour Body Armours,"   # 7
+#"   Armour Gloves,"         # 8
+#"   Armour Boots,"          # 9
+#"  Armour Helmets,"         # 10
+##" ..."                      # 100 # Platzhalter
+##"..."                       # 1000 # Platzhalter
+#)
+
+entries=()
+verzeichnis="Filter/"
+
+for datei in "$verzeichnis"/*.txt
+do
+  if [ -f "$datei" ]; then  # Prüfen, ob es sich um eine Datei handelt
+    entries+=("$(basename "$datei")")
+    mapfile -t entries < <(ls "$verzeichnis"/*.txt 2>/dev/null | xargs -I {} basename "{}" .txt)
+  fi
+done
   
 # Liste der Werte
 values=(
