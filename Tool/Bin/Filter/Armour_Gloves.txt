@@ -7,13 +7,13 @@ Show # All Armour Gloves
              	#ItemLevel <= 1
              	#DropLevel <= 20
              	#Quality >= 0
-             	#HasExplicitMod \"\" \"\"
+             	#HasExplicitMod "" ""
              	#Mirrored True False
              	#Corrupted True False
              	#Influence True False
              	Rarity Normal Magic Rare
-				BaseType == \"Iron Gauntlets\" \"Plated Gauntlets\" \"Bronze Gauntlets\" \"Steel Gauntlets\" \"Antique Gauntlets\" \"Ancient Gauntlets\" \"Goliath Gauntlets\" \"Vaal Gauntlets\" \"Titan Gauntlets\" \"Taxing Gauntlets\" \"Gruelling Gauntlets\" \"Debilitation Gauntlets\"
-             	#Class == \"\" 
+				BaseType == "Iron Gauntlets" "Plated Gauntlets" "Bronze Gauntlets" "Steel Gauntlets" "Antique Gauntlets" "Ancient Gauntlets" "Goliath Gauntlets" "Vaal Gauntlets" "Titan Gauntlets" "Taxing Gauntlets" "Gruelling Gauntlets" "Debilitation Gauntlets"
+             	#Class == "" 
              	#Sockets >= 3WWW
              	SetFontSize 15
              	SetTextColor 1 1 1 255
@@ -22,3 +22,4 @@ Show # All Armour Gloves
              	PlayAlertSound 1 300
              	PlayEffect Red
              	MinimapIcon 0 Red Hexagon
+             	
