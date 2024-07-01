@@ -266,7 +266,7 @@ for i in "${!selected[@]}"; do
 done
 
 # region Datei zusammenbauen und exportieren
-output_file="../../../CustomLootFilter_v1_6_3.filter" # Dateipfad festlegen: Path of Exile Root Ordner
+output_file="../../../CustomLootFilter_v1_6_5.filter" # Dateipfad festlegen: Path of Exile Root Ordner
 > "$output_file"
 echo "$part1" | tee -a "$output_file"
 echo "${selected[*]}" | tee -a "$output_file"
