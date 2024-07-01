@@ -40,14 +40,14 @@ part2=$(cat "$dateipfad")
 #region Liste der Einträge
 entries=()
 # Dateien finden und Namen zur Liste hinzufügen
-verzeichnis="Filter/"
+verzeichnis="Filters/"
 for datei in "$verzeichnis"/*.txt
 do
   # Prüfen, ob es sich um eine Datei handelt
   if [ -f "$datei" ]; then  
     ## Namen in values schreiben
     # Präfix speichern
-    prefix="Filter//"
+    prefix="Filters//"
     # Der Dateiname mit Endung
     dateiname="$datei"
     # Entfernen des Präfix und der Endung und Speichern des Basisnamens in einer neuen Variable
