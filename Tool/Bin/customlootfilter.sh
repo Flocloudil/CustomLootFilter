@@ -252,7 +252,7 @@ while true; do
 
     if [[ "$choice" =~ ^[0-9]+$ ]] && (( choice >= 1 && choice <= ${#values[@]} )); then
         selected+=("${values[choice-1]}") 
-        selectedNames+=("${entries[choice-1]}") 
+        selectedNames+=("${entries[choice-1]},") 
     else
         echo "Ungültige Auswahl. Bitte versuchen Sie es erneut."
         read -p "Drücken Sie eine Taste zum Fortfahren..."
