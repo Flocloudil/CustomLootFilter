@@ -14,8 +14,7 @@ Show # All Evasion Gloves
              	#Corrupted True False
              	#Influence True False
              	Rarity Normal Magic Rare
-             	BaseType == "Rawhide Gloves" "Goathide Gloves" "Deerskin Gloves" "Nubuck Gloves" "Eelskin Gloves" "Sharkskin Gloves"	
-				"Shagreen Gloves" "Stealth Gloves" "Slink Gloves" "Gauche Gloves" "Southswing Gloves" "Sinistral Gloves"
+             	BaseType == "Rawhide Gloves" "Goathide Gloves" "Deerskin Gloves" "Nubuck Gloves" "Eelskin Gloves" "Sharkskin Gloves" "Shagreen Gloves" "Stealth Gloves" "Slink Gloves" "Gauche Gloves" "Southswing Gloves" "Sinistral Gloves"
              	#Class == "" 
              	#Sockets >= 3WWW
              	SetFontSize 15
