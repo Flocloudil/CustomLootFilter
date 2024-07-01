@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Erster Teil des Filters
+# region Erster Teil
 part1="#===============================================================================================================
          # NeverSink's Indepth Loot Filter - for Path of Exile
          #===============================================================================================================
@@ -230,8 +230,9 @@ part1="#========================================================================
          # !! Waypoint c0.alpha \"All Rules - Highest priority - DANGER ZONE\"
          
          "
+# endregion
 
-# Part 2
+#region Zweiter Teil
 part2="Show # \$type->6l \$tier->hightier
        	Mirrored False
        	Corrupted False
@@ -9783,8 +9784,9 @@ part2="Show # \$type->6l \$tier->hightier
        	PlayAlertSound 3 300
        	PlayEffect Pink
        	MinimapIcon 0 Pink Circle"
+# endregion
 
-# Liste der Einträge 
+#region Liste der Einträge
 entries=(
 "   Sapphire Rings,"        # 1
 "   Ruby Rings,"            # 2
@@ -9799,8 +9801,9 @@ entries=(
 #" ..."                      # 100 # Platzhalter
 #"..."                       # 1000 # Platzhalter
 )
-  
-# Liste der Werte
+# endregion
+
+# region Liste der Werte
 values=(
 "Show # All Sapphire Rings until level x
         #Width >= 2
@@ -9950,6 +9953,7 @@ Show # All Armour Gloves
 "
               " # 10
 )
+# endregion
 
 # Array für ausgewählte Einträge
 selected=()
@@ -9986,14 +9990,13 @@ while true; do
 done
 
 echo
-#echo "Neuer Filter: $part1 ${selected[*]} $part2"
-# Datei für die Ausgabe
-output_file="../../CustomLootFilter_v1_4.filter" # Datei im Path of Exile Root Ordner ablegen
+# Dateipfad festlegen: Path of Exile Root Ordner
+output_file="../../CustomLootFilter_v1_4.filter" 
 
 # Neue Datei erstellen
 > "$output_file"
 echo "$part1" | tee -a "$output_file"
 echo "${selected[*]}" | tee -a "$output_file"
 echo "$part2" | tee -a "$output_file"
-#read # Für Debugging
+
 close
