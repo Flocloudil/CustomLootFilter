@@ -212,7 +212,7 @@ done
 # endregion
 
 # region Dateien finden und Inhalt zur Liste hinzufügen
-verzeichnis="Filter/"
+verzeichnis="Filters/"
 for datei in "$verzeichnis"/*.txt
 do
   # Prüfen, ob es sich um eine Datei handelt
