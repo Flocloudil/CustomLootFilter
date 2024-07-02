@@ -1,0 +1,30 @@
+
+
+
+Show # All Two-handed Axes with Attack Speed Mod
+        #Width >= 2
+      	#Height >= 3
+        #AreaLevel >= 0
+      	#ItemLevel >= 1
+      	#DropLevel >= 1
+      	#ItemLevel <= 100
+      	#DropLevel <= 20
+      	#Quality >= 0
+      	#Mirrored True False
+      	#Corrupted True False
+      	#Influence True False
+		HasExplicitMod "of Skill" "of Ease" "of Mastery" "of Renown" "of Acclaim" "of Fame" "of Infamy" "of Celebration" #TODO: auch influenced mods hinzufügen?
+      	Rarity Normal Magic Rare
+      	#BaseType == ""	
+      	Class == "Two Hand Axes"
+      	#Sockets >= 3WWW
+      	SetFontSize 15
+      	SetTextColor 1 1 1 255
+      	SetBorderColor 1 1 1 255
+      	SetBackgroundColor 255 255 10 255
+      	PlayAlertSound 1 300
+      	PlayEffect Yellow
+      	MinimapIcon 0 Yellow Diamond
+     
+	 
+	 
