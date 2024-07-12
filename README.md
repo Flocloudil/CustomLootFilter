@@ -29,13 +29,13 @@ Anleitung:
 
 
 
-7. Beginn der Filter Konfiguration
+6. Beginn der Filter Konfiguration
    
    ![B0005_ToolMenu](https://github.com/user-attachments/assets/47bf21f3-45b9-4668-95db-14aefd9a7020)
 
 
 
-8. Die Liste der einzelnen Item-Filter zeigen alle Item Typen, welche in den CustomLootFilter eingebaut werden können
+7. Die Liste der einzelnen Item-Filter zeigen alle Item Typen, welche in den CustomLootFilter eingebaut werden können
    ![image](https://github.com/user-attachments/assets/ffd9f914-ebba-4430-b898-e35c5b8cc94d)
 
    Die darunter aufgeführte Aufzählung "Ausgewählte Filter:" zeigt alle Item-Filter, welche bisher Bestandteil des eigenen CustomFilters sind. Zu Beginn ist diese Liste noch leer.
@@ -44,4 +44,17 @@ Anleitung:
 
 
 
-   9. 
+8. Um einen Itemtypen hinzuzufügen, gibt man die Filter-Nummer ein und bestätigt diese mit ENTER
+   Beispiel: 6 für Sapphire Ringe (Ringe mit Cold Resistance)
+      
+   ![image](https://github.com/user-attachments/assets/5ce039c5-d456-44b0-8c4d-d304aba91136)
+
+
+
+9. Nach jeder Filterauswahl wird nach der Schriftgrößenanpassung gefragt. Diese lässt sich entweder durch die Eingabe von "a" und anschließender Bestätigung durch ENTER überspringen/abbrechen, oder mit "1", "2" und "3" konfigurieren
+
+   ![image](https://github.com/user-attachments/assets/ef85c3a7-12cf-47ac-a56d-e70d41e73887)
+
+
+
+10. ...
