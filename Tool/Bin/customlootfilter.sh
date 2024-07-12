@@ -354,5 +354,3 @@ else
   echo "$part2_strict" | tee -a "$output_file"
 fi
 # endregion
-
-close
