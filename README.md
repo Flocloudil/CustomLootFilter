@@ -21,11 +21,27 @@ Anleitung:
 
 
 
-5. Beim Starten des Tools muss festgelegt werden, welcher Neversink-Filter von Filterblade als Basis dienen soll
-   (Standard = Regular, Strict = Semi-Strict)
+5. Beim Starten des Tools muss festgelegt werden, welcher Neversink-Filter von Filterblade als Basis dienen soll (Standard = Regular, Strict = Semi-Strict)
+   
+   ![B0002_ToolStart](https://github.com/user-attachments/assets/2c402a8c-1120-4853-a04d-de99701116eb)
    ![B0003_Filterblade_Regular](https://github.com/user-attachments/assets/41c2945a-e1ed-4479-9f1f-b94a605d4977)
    ![B0004_Filterblade_SemiStrict](https://github.com/user-attachments/assets/b6618449-6a08-4022-a750-97e9c4993413)
 
 
 
-6. ...
+7. Beginn der Filter Konfiguration
+   
+   ![B0005_ToolMenu](https://github.com/user-attachments/assets/47bf21f3-45b9-4668-95db-14aefd9a7020)
+
+
+
+8. Die Liste der einzelnen Item-Filter zeigen alle Item Typen, welche in den CustomLootFilter eingebaut werden können
+   ![image](https://github.com/user-attachments/assets/ffd9f914-ebba-4430-b898-e35c5b8cc94d)
+
+   Die darunter aufgeführte Aufzählung "Ausgewählte Filter:" zeigt alle Item-Filter, welche bisher Bestandteil des eigenen CustomFilters sind. Zu Beginn ist diese Liste noch leer.
+   
+   ![image](https://github.com/user-attachments/assets/999bb3a0-5c3f-4699-91fa-5101de2bb129)
+
+
+
+   9. 
