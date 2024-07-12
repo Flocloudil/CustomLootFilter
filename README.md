@@ -78,6 +78,18 @@ ______________________________ ___ __ _
 ______________________________ ___ __ _
 ______________________________ ___ __ _
 ______________________________ ___ __ _
+______________________________ ___ __ _
+______________________________ ___ __ _
+______________________________ ___ __ _
+______________________________ ___ __ _
+______________________________ ___ __ _
+______________________________ ___ __ _
+______________________________ ___ __ _
+______________________________ ___ __ _
+______________________________ ___ __ _
+______________________________ ___ __ _
+______________________________ ___ __ _
+______________________________ ___ __ _
 
 
 Beispiele:
@@ -97,3 +109,29 @@ Ansicht im Spiel:
 
 ![0002_SapphireOnly](https://github.com/user-attachments/assets/0b994526-93b0-4be5-aacc-2dcf6f7421d5)
 
+Mit CustomLootFilter (Sapphire Rings + Evasion Body Armour)
+Ansicht im Tool:
+
+![image](https://github.com/user-attachments/assets/69723e18-5b31-4ffb-a610-61f1e497a0a5)
+
+Ansicht im Spiel: (Unqiues werden weiterhin als Unique angezeigt, um sie nicht zu übersehen, TBD: Uniques auch einfärben, aber andere Schriftfarbe und Randfarbe)
+
+![0003_Sapphire_EvasionBody](https://github.com/user-attachments/assets/46ab5085-b2b2-4ea7-9219-efb9e190c452)
+
+Mit CustomLootFilter (Nur Ruby Rings)
+Ansicht im Tool:
+
+![image](https://github.com/user-attachments/assets/16e50134-53f8-43ae-9d09-0bffe7d3571e)
+
+Ansicht im Spiel:
+
+![0004_RubyOnly](https://github.com/user-attachments/assets/3ae1ad5e-e072-4693-a39a-6c1b7f673ab5)
+
+Mit CustomLootFilter (Evasion Body Armour + Evasion Gloves + Ruby Rings + Sapphire Rings + Two-handed Axes)
+Ansicht im Tool:
+
+![image](https://github.com/user-attachments/assets/da7faa5c-f5fd-43c8-be3e-ad4969467876)
+
+Ansicht im Spiel:
+
+![0005_All](https://github.com/user-attachments/assets/2defc836-4e7e-4f36-83db-1115d4ac5d6d)
