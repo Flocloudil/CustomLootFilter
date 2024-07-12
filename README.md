@@ -46,13 +46,14 @@ Anleitung:
 
 
 9. Um einen Itemtypen hinzuzufügen, gibt man die Filter-Nummer ein und bestätigt diese mit ENTER
+
    Beispiel: 6 für Sapphire Ringe (Ringe mit Cold Resistance)
       
    ![image](https://github.com/user-attachments/assets/5ce039c5-d456-44b0-8c4d-d304aba91136)
 
 
 
-10. Nach jeder Filterauswahl wird nach der Schriftgrößenanpassung gefragt. Diese lässt sich entweder durch die Eingabe von "a" und anschließender Bestätigung durch ENTER überspringen/abbrechen, oder mit "1", "2" und "3" konfigurieren
+11. Nach jeder Filterauswahl wird nach der Schriftgrößenanpassung gefragt. Diese lässt sich entweder durch die Eingabe von "a" und anschließender Bestätigung durch ENTER überspringen/abbrechen, oder mit "1", "2" und "3" konfigurieren
 
    ![image](https://github.com/user-attachments/assets/ef85c3a7-12cf-47ac-a56d-e70d41e73887)
 
