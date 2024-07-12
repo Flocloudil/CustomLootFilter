@@ -85,12 +85,14 @@ Beispiele:
 
 Standard Loot Filter von Filterblade (ohne Verwendung des CustomLootFilter Tools)
 Ansicht im Spiel:
+
 ![0001_Standard](https://github.com/user-attachments/assets/44cb1511-3f6d-40dd-9bd5-667a1b33bb61)
 
 Mit CustomLootFilter (nur Sapphire Rings)
 Ansicht im Tool:
 
 ![image](https://github.com/user-attachments/assets/0a8a83f4-d375-41e1-b258-c132483dc216)
+
 Ansicht im Spiel:
 
 ![0002_SapphireOnly](https://github.com/user-attachments/assets/0b994526-93b0-4be5-aacc-2dcf6f7421d5)
