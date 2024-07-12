@@ -132,6 +132,6 @@ Ansicht im Tool:
 
 ![image](https://github.com/user-attachments/assets/da7faa5c-f5fd-43c8-be3e-ad4969467876)
 
-Ansicht im Spiel:
+Ansicht im Spiel: (5-Link Axt in diesem Beispiel wird nicht mehr hervorgehoben als andere Äxte, TBD!)
 
 ![0005_All](https://github.com/user-attachments/assets/2defc836-4e7e-4f36-83db-1115d4ac5d6d)
