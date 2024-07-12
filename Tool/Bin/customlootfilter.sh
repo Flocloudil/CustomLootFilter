@@ -2,22 +2,34 @@
 
 # region Erster Part
 dateiname="Pt1" # Der Dateiname ohne Endung
+dateiname_strict="Pt1_strict" # Der Dateiname ohne Endung
 
 # Der vollständige Dateipfad
 dateipfad="Defaults/${dateiname}.txt"
+dateipfad_strict="Defaults/${dateiname_strict}.txt"
 
 # Den Inhalt der Datei in die Variable 'datei_inhalt' speichern
 part1=$(cat "$dateipfad")
+part1_strict=$(cat "$dateipfad_strict")
+echo "$part1"
+echo "$part1_strict"
+read
 # endregion
 
 # region Zweiter Part
 dateiname="Pt2" # Der Dateiname ohne Endung
+dateiname_strict="Pt2_strict" # Der Dateiname ohne Endung
 
 # Der vollständige Dateipfad
 dateipfad="Defaults/${dateiname}.txt"
+dateipfad_strict="Defaults/${dateiname_strict}.txt"
 
 # Den Inhalt der Datei in die Variable 'datei_inhalt' speichern
 part2=$(cat "$dateipfad")
+part2_strict=$(cat "$dateipfad_strict")
+echo "$part2"
+echo "$part2_strict"
+read
 # endregion
 
 #region Liste der Einträge alt
@@ -230,6 +242,17 @@ selected=()
 # Array für Namen der ausgewählten Einträge
 selectedNames=()
 
+# region Filterauswahl
+while true; do
+clear
+read -p "Wähle zwischen Standard-Filter (1) und Strict-Filter (2): " filterChoice
+echo
+if [[ "$filterChoice" == "1" || "$filterChoice" == "2" ]]; then
+    break
+fi
+done
+# endregion
+
 # region Programmstart
 while true; do
     clear
@@ -266,11 +289,25 @@ for i in "${!selected[@]}"; do
 done
 
 # region Datei zusammenbauen und exportieren
-output_file="../../../CustomLootFilter_v1_6_7.filter" # Dateipfad festlegen: Path of Exile Root Ordner
+output_file="../../../CustomLootFilter_v1_6_8.filter" # Dateipfad festlegen: Path of Exile Root Ordner
 > "$output_file"
-echo "$part1" | tee -a "$output_file"
+
+# Part 1
+if [[ "$filterChoice" == "1" ]]; then
+  echo "$part1" | tee -a "$output_file"
+else
+  echo "$part1_strict" | tee -a "$output_file"
+fi
+
+# Eigene Filter hinzufügen
 echo "${selected[*]}" | tee -a "$output_file"
-echo "$part2" | tee -a "$output_file"
+
+# Part 2
+if [[ "$filterChoice" == "1" ]]; then
+  echo "$part2" | tee -a "$output_file"
+else
+  echo "$part2_strict" | tee -a "$output_file"
+fi
 # endregion
 
 close
