@@ -48,7 +48,7 @@ Anleitung:
 9. Um einen Itemtypen hinzuzufügen, gibt man die Filter-Nummer ein und bestätigt diese mit ENTER
 
    Beispiel: 6 für Sapphire Ringe (Ringe mit Cold Resistance)
-      
+
    ![image](https://github.com/user-attachments/assets/5ce039c5-d456-44b0-8c4d-d304aba91136)
 
 
