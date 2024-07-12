@@ -1,11 +1,8 @@
-
-
-
 #===============================================================================================================
 # NeverSink's Indepth Loot Filter - for Path of Exile
 #===============================================================================================================
-# VERSION:  8.14.4.2024.170.13
-# TYPE:     1-REGULAR
+# VERSION:  8.14.4
+# TYPE:     2-SEMI-STRICT
 # STYLE:    DEFAULT
 # AUTHOR:   NeverSink
 # BUILDNOTES: Filter generated with NeverSink's FilterpolishZ and the domainlanguage Exo.
@@ -228,5 +225,14 @@
 # [[0100]] Global overriding rules
 #===============================================================================================================
 # !! Waypoint c0.alpha : "All Rules - Highest priority - DANGER ZONE"
+
+
+
+
+
+
+
+
+
 
 
