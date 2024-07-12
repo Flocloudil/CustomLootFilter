@@ -11,9 +11,6 @@ dateipfad_strict="Defaults/${dateiname_strict}.txt"
 # Den Inhalt der Datei in die Variable 'datei_inhalt' speichern
 part1=$(cat "$dateipfad")
 part1_strict=$(cat "$dateipfad_strict")
-echo "$part1"
-echo "$part1_strict"
-read
 # endregion
 
 # region Zweiter Part
@@ -27,9 +24,6 @@ dateipfad_strict="Defaults/${dateiname_strict}.txt"
 # Den Inhalt der Datei in die Variable 'datei_inhalt' speichern
 part2=$(cat "$dateipfad")
 part2_strict=$(cat "$dateipfad_strict")
-echo "$part2"
-echo "$part2_strict"
-read
 # endregion
 
 #region Liste der Einträge alt
