@@ -75,6 +75,8 @@ Anleitung:
 
 
 Beispiele:
+
+
 Standard Loot Filter von Filterblade (ohne Verwendung des CustomLootFilter Tools)
 Ansicht im Spiel:
 ![0001_Standard](https://github.com/user-attachments/assets/44cb1511-3f6d-40dd-9bd5-667a1b33bb61)
