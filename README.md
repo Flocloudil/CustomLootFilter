@@ -57,4 +57,17 @@ Anleitung:
 
 
 
-10. ...
+10. Nun wurde dem CustomLootFilter der erste ItemTyp hinzugefügt.
+    ![image](https://github.com/user-attachments/assets/9f5da481-7252-45f7-90cf-bdf022bd1942)
+
+    Die Konfiguration kann nun weiter fortgesetzt werden, indem mehr ItemFilter eingefügt werden. Wenn die gewünschte Auswahl final ist, kann der CustomLootFilter mit der Eingabe von "d" und einer Bestätigung mit ENTER gespeichert werden.
+
+
+   Der Filter wird dann automatisch in das korrekte Verzeichnis abgelegt.
+   Nun kann im Spiel direkt der Filter ausgewählt werden:
+   ![image](https://github.com/user-attachments/assets/989778e2-8e12-4da9-95c8-46ee9aaff81b)
+
+   Ist der Filter bereits einmal angelegt worden, kann man mit erneutem Starten des CustomLootFilter Tools den Filter jederzeit überschreiben.
+   Dabei ist dann im Spiel nur noch ein Refresh notwendig, um die Änderungen zu sehen:
+   
+   ![image](https://github.com/user-attachments/assets/19eb3f13-d682-49b8-ae94-c69932782221)
