@@ -18,7 +18,7 @@ Show # All Two-handed Axes with Attack Speed Mod
       	#BaseType == ""	
       	Class == "Two Hand Axes"
       	#Sockets >= 3WWW
-      	SetFontSize 15
+      	SetFontSize 16
       	SetTextColor 1 1 1 255
       	SetBorderColor 1 1 1 255
       	SetBackgroundColor 255 255 10 255
