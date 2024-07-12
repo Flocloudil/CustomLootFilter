@@ -231,25 +231,33 @@ do
 done
 # endregion
 
+# region Listen für Filter-Auswahl
 # Array für ausgewählte Einträge
 selected=()
 # Array für Namen der ausgewählten Einträge
 selectedNames=()
+# endregion
 
 # region Filterauswahl
 while true; do
-clear
-read -p "Wähle zwischen Standard-Filter (1) und Strict-Filter (2): " filterChoice
-echo
-if [[ "$filterChoice" == "1" || "$filterChoice" == "2" ]]; then
+  clear
+  echo "Path of Exile CustomLootFilter Tool"
+  echo "___________________________________"
+  echo
+  read -p "Wähle zwischen Standard-Filter (1) und Strict-Filter (2): " filterChoice
+  echo
+  if [[ "$filterChoice" == "1" || "$filterChoice" == "2" ]]; then
     break
-fi
+  fi
 done
 # endregion
 
 # region Programmstart
 while true; do
     clear
+    echo "Path of Exile CustomLootFilter Tool"
+    echo "___________________________________"
+    echo
     echo "Wähle  einen Filter aus der Liste:"
     echo
     
@@ -276,11 +284,11 @@ while true; do
     fi
 done
 echo
-# endregion
 
 for i in "${!selected[@]}"; do
     echo "${selected[i]}"
 done
+# endregion
 
 # region Datei zusammenbauen und exportieren
 output_file="../../../CustomLootFilter_v1_6_8.filter" # Dateipfad festlegen: Path of Exile Root Ordner
