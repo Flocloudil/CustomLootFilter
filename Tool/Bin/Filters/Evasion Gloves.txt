@@ -17,7 +17,7 @@ Show # All Evasion Gloves
              	BaseType == "Rawhide Gloves" "Goathide Gloves" "Deerskin Gloves" "Nubuck Gloves" "Eelskin Gloves" "Sharkskin Gloves" "Shagreen Gloves" "Stealth Gloves" "Slink Gloves" "Gauche Gloves" "Southswing Gloves" "Sinistral Gloves"
              	#Class == "" 
              	#Sockets >= 3WWW
-             	SetFontSize 15
+             	SetFontSize 32
              	SetTextColor 1 1 1 255
              	SetBorderColor 1 1 1 255
              	SetBackgroundColor 128 254 128 255

@@ -276,11 +276,54 @@ while true; do
     fi
 
     if [[ "$choice" =~ ^[0-9]+$ ]] && (( choice >= 1 && choice <= ${#values[@]} )); then
-        selected+=("${values[choice-1]}") 
+        # Schriftgröße anpassen
+        OldValueToChange="SetFontSize 32"
+        while true; do
+            clear
+            echo "Path of Exile CustomLootFilter Tool"
+            echo "___________________________________"
+            echo
+            read -p "Schriftgröße anpassen? Klein (1), Mittel (2), Groß (3), Abbrechen (a) " fontSize
+            if [[ "$fontSize" == "a" ]]; then
+              break
+              selected+=("${values[choice-1]}") 
+            elif [[ "$fontSize" == "1" ]]; then
+              # Set fontSize to small
+              changedFilterValue="SetFontSize 18"
+              for value in "${values[@]}"; do
+                if [ "$value" == "${values[choice-1]}" ]; then
+                  value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
+                  selected+=("$value")
+                fi
+              done
+              break
+            elif [[ "$fontSize" == "2" ]]; then
+              # Set fontSize to medium
+              changedFilterValue="SetFontSize 32"
+              for value in "${values[@]}"; do
+                if [ "$value" == "${values[choice-1]}" ]; then
+                  value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
+                  selected+=("$value")
+                fi
+              done
+              break
+            elif [[ "$fontSize" == "3" ]]; then
+              # Set fontSize to big
+              changedFilterValue="SetFontSize 45"
+              for value in "${values[@]}"; do
+                if [ "$value" == "${values[choice-1]}" ]; then
+                  value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
+                  selected+=("$value")
+                fi
+              done
+              break
+            fi
+            echo
+        done
         selectedNames+=("${entries[choice-1]},") 
     else
-        echo "Ungültige Auswahl. Bitte versuchen Sie es erneut."
-        read -p "Drücken Sie eine Taste zum Fortfahren..."
+        echo "Ungültige Auswahl. Bitte versuche es erneut."
+        read -p "Drücke eine Taste zum Fortfahren..."
     fi
 done
 echo
@@ -291,7 +334,7 @@ done
 # endregion
 
 # region Datei zusammenbauen und exportieren
-output_file="../../../CustomLootFilter_v1_6_8.filter" # Dateipfad festlegen: Path of Exile Root Ordner
+output_file="../../../CustomLootFilter_v1_7_0.filter" # Dateipfad festlegen: Path of Exile Root Ordner
 > "$output_file"
 
 # Part 1

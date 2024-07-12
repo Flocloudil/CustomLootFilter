@@ -17,7 +17,7 @@ Rarity Normal Magic Rare
 BaseType == "Wool Gloves" "Leyline Gloves" "Velvet Gloves" "Silk Gloves" "Embroidered Gloves" "Aetherwind Gloves" "Satin Gloves" "Samite Gloves" "Conjurer Gloves" "Arcanist Gloves" "Sorcerer Gloves" "Fingerless Silk Gloves" "Nexus Gloves"
 #Class == "" 
 #Sockets >= 3WWW
-SetFontSize 15
+SetFontSize 32
 SetTextColor 1 1 1 255
 SetBorderColor 1 1 1 255
 SetBackgroundColor 10 10 255 255

@@ -17,7 +17,7 @@ Rarity Normal Magic Rare
 BaseType == "Iron Gauntlets" "Plated Gauntlets" "Bronze Gauntlets" "Steel Gauntlets" "Antique Gauntlets" "Ancient Gauntlets" "Goliath Gauntlets" "Vaal Gauntlets" "Titan Gauntlets" "Taxing Gauntlets" "Gruelling Gauntlets" "Debilitation Gauntlets"
 #Class == "" 
 #Sockets >= 3WWW
-SetFontSize 15
+SetFontSize 32
 SetTextColor 1 1 1 255
 SetBorderColor 1 1 1 255
 SetBackgroundColor 255 10 10 255
