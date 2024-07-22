@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# region Variables
 # region Erster Part
 dateiname="Pt1" # Der Dateiname ohne Endung
 dateiname_strict="Pt1_strict" # Der Dateiname ohne Endung
@@ -216,6 +217,7 @@ done
 #              " # 10
 #)
 # endregion
+# endregion
 
 # region Dateien finden und Inhalt zur Liste hinzufügen
 verzeichnis="Filters/"
@@ -237,6 +239,87 @@ selected=()
 # Array für Namen der ausgewählten Einträge
 selectedNames=()
 # endregion
+
+ChooseColors(){ 
+  # Params:
+  # $1 = $OldValueToChange
+  # $2 = $choice
+  # $3 = ${selected[@]}
+  while true; do
+   clear
+   echo "Path of Exile CustomLootFilter Tool"
+   echo "___________________________________"
+   echo
+   echo "Farbe anpassen?"
+   echo
+   echo "Wähle aus den folgenden Farbmustern oder überspringe mit (a)"
+   # TODO: Liste mit Farbmustern auslesen und hier auflisten
+   dateipfad="Defaults/ColorPatterns.txt"
+   colorList=$(cat "$dateipfad")
+   # TODO: if background, set background, else set text and border
+   if [ $1 = "Background" ]; then
+     echo "Hintergrundfarbe:"
+   else
+     echo "Schrift- und Rahmenfarbe:"
+   fi
+   echo
+   echo "$colorList"
+   echo
+   read -p "Bitte Auswahl eingeben: " colorChoice
+   if [[ "$colorChoice" == "a" ]]; then
+     break
+     selected+=("${values[choice-1]}") 
+   elif [[ "$colorChoice" == "1" ]]; then # White / Weiß
+     
+     # TODO: if background, set background, else set text and border
+     if [ $1 = "Background" ]; then
+      changedFilterValue="SetBackgroundColor 255 255 255 255"
+      changedFilterValue1="PlayEffect White"
+      changedFilterValue1="MinimapIcon 0 White Hexagon"
+     else
+      changedFilterValue5="SetTextColor 255 255 255 255"
+      changedFilterValue6="SetBorderColor 255 255 255 255"
+     fi
+     
+     # TODO: Werte erst ganz am Ende schreiben, vorher die korrekte Farbe zuordnen und in Variablen speichern
+     for value in "${values[@]}"; do
+       if [ "$value" == "${values[choice-1]}" ]; then
+         # TODO: if background, set background, else set text and border
+         if [ $1 = "Background" ]; then
+          value=$(echo "$value" | sed "s/SetBackgroundColor/$changedFilterValue/g")
+          value=$(echo "$value" | sed "s/PlayEffect/$changedFilterValue1/g")
+         else
+          value=$(echo "$value" | sed "s/SetTextColor/$changedFilterValue5/g")
+          value=$(echo "$value" | sed "s/SetBorderColor/$changedFilterValue6/g")
+         fi
+         selected+=("$value")
+       fi
+     done
+     break
+   elif [[ "$colorChoice" == "1" ]]; then # Black / Schwarz
+     
+     changedFilterValue="SetBackgroundColor 0 0 0 255"
+     for value in "${values[@]}"; do
+       if [ "$value" == "${values[choice-1]}" ]; then
+         value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
+         selected+=("$value")
+       fi
+     done
+     break
+   elif [[ "$colorChoice" == "2" ]]; then
+     # Set color to red
+     changedFilterValue="SetBackgroundColor 255 10 10 255" # Rot
+     for value in "${values[@]}"; do
+       if [ "$value" == "${values[choice-1]}" ]; then
+         value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
+         selected+=("$value")
+       fi
+     done
+     break
+   fi
+   echo
+  done 
+  }
 
 # region Filterauswahl
 while true; do
@@ -320,62 +403,13 @@ while true; do
             fi
             echo
         done
-        
+        # region Color choice
+        # TODO: Logik in Funktion auslagern und bei 'OldValueToChange' und 'NewValue' vorher den Parameter abfragen (Background oder Text/Rahmen)
+        OldValueToChange="SetBackgroundColor" # TODO: gekürzten String ohne Werte übergeben und dann ganze Zeile ersetzen
         # TODO: Colour choice
+        
         # Farbe anpassen
-        OldValueToChange="SetBackgroundColor 255 10 10 255" # TODO: gekürzten String ohne Werte übergeben und dann ganze Zeile ersetzen
-        while true; do
-            clear
-            echo "Path of Exile CustomLootFilter Tool"
-            echo "___________________________________"
-            echo
-            echo "Farbe anpassen?"
-            echo
-            echo "Wähle aus den folgenden Farbmustern oder überspringe mit (a)"
-            # TODO: Liste mit Farbmustern auslesen und hier auflisten
-            dateipfad="Defaults/ColorPatterns.txt"
-            colorList=$(cat "$dateipfad")
-            echo "Hintergrundfarbe:"
-            echo
-            echo "$colorList"
-            echo
-            read -p "Bitte Auswahl eingeben: " colorChoice
-            if [[ "$colorChoice" == "a" ]]; then
-              break
-              selected+=("${values[choice-1]}") 
-            elif [[ "$colorChoice" == "1" ]]; then
-              # Set color to white
-              changedFilterValue="SetBackgroundColor 255 255 255 255" # Weiß
-              for value in "${values[@]}"; do
-                if [ "$value" == "${values[choice-1]}" ]; then
-                  value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
-                  selected+=("$value")
-                fi
-              done
-              break
-#            elif [[ "$fontSize" == "2" ]]; then
-#              # Set fontSize to medium
-#              changedFilterValue="SetFontSize 32"
-#              for value in "${values[@]}"; do
-#                if [ "$value" == "${values[choice-1]}" ]; then
-#                  value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
-#                  selected+=("$value")
-#                fi
-#              done
-#              break
-#            elif [[ "$fontSize" == "3" ]]; then
-#              # Set fontSize to big
-#              changedFilterValue="SetFontSize 45"
-#              for value in "${values[@]}"; do
-#                if [ "$value" == "${values[choice-1]}" ]; then
-#                  value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
-#                  selected+=("$value")
-#                fi
-#              done
-#              break
-            fi
-            echo
-        done
+        ChooseColors "$OldValueToChange" "$choice" "${selected[@]}"
         
         selectedNames+=("${entries[choice-1]},") 
     else
