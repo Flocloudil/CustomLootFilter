@@ -286,14 +286,14 @@ while true; do
             read -p "Schriftgröße anpassen? Klein (1), Mittel (2), Groß (3), Abbrechen (a) " fontSize
             if [[ "$fontSize" == "a" ]]; then
               break
-              selected+=("${values[choice-1]}") 
+              #selected+=("${values[choice-1]}") 
             elif [[ "$fontSize" == "1" ]]; then
               # Set fontSize to small
               changedFilterValue="SetFontSize 18"
               for value in "${values[@]}"; do
                 if [ "$value" == "${values[choice-1]}" ]; then
                   value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
-                  selected+=("$value")
+                  #selected+=("$value")
                 fi
               done
               break
@@ -303,7 +303,7 @@ while true; do
               for value in "${values[@]}"; do
                 if [ "$value" == "${values[choice-1]}" ]; then
                   value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
-                  selected+=("$value")
+                  #selected+=("$value")
                 fi
               done
               break
@@ -313,13 +313,70 @@ while true; do
               for value in "${values[@]}"; do
                 if [ "$value" == "${values[choice-1]}" ]; then
                   value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
-                  selected+=("$value")
+                  #selected+=("$value")
                 fi
               done
               break
             fi
             echo
         done
+        
+        # TODO: Colour choice
+        # Farbe anpassen
+        OldValueToChange="SetBackgroundColor 255 10 10 255" # TODO: gekürzten String ohne Werte übergeben und dann ganze Zeile ersetzen
+        while true; do
+            clear
+            echo "Path of Exile CustomLootFilter Tool"
+            echo "___________________________________"
+            echo
+            echo "Farbe anpassen?"
+            echo
+            echo "Wähle aus den folgenden Farbmustern oder überspringe mit (a)"
+            # TODO: Liste mit Farbmustern auslesen und hier auflisten
+            dateipfad="Defaults/ColorPatterns.txt"
+            colorList=$(cat "$dateipfad")
+            echo "Hintergrundfarbe:"
+            echo
+            echo "$colorList"
+            echo
+            read -p "Bitte Auswahl eingeben: " colorChoice
+            if [[ "$colorChoice" == "a" ]]; then
+              break
+              selected+=("${values[choice-1]}") 
+            elif [[ "$colorChoice" == "1" ]]; then
+              # Set color to white
+              changedFilterValue="SetBackgroundColor 255 255 255 255" # Weiß
+              for value in "${values[@]}"; do
+                if [ "$value" == "${values[choice-1]}" ]; then
+                  value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
+                  selected+=("$value")
+                fi
+              done
+              break
+#            elif [[ "$fontSize" == "2" ]]; then
+#              # Set fontSize to medium
+#              changedFilterValue="SetFontSize 32"
+#              for value in "${values[@]}"; do
+#                if [ "$value" == "${values[choice-1]}" ]; then
+#                  value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
+#                  selected+=("$value")
+#                fi
+#              done
+#              break
+#            elif [[ "$fontSize" == "3" ]]; then
+#              # Set fontSize to big
+#              changedFilterValue="SetFontSize 45"
+#              for value in "${values[@]}"; do
+#                if [ "$value" == "${values[choice-1]}" ]; then
+#                  value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
+#                  selected+=("$value")
+#                fi
+#              done
+#              break
+            fi
+            echo
+        done
+        
         selectedNames+=("${entries[choice-1]},") 
     else
         echo "Ungültige Auswahl. Bitte versuche es erneut."

@@ -1,0 +1,10 @@
+1. 	Weiß
+2. 	Schwarz
+3. 	Rot
+4. 	Blau
+5. 	Gelb
+6. 	Lila
+7. 	Orange
+8. 	Grün
+9. 	Rosa
+10.	Grau
