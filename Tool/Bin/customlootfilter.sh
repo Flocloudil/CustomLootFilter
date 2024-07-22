@@ -278,7 +278,7 @@ while true; do
     fi
 
     if [[ "$choice" =~ ^[0-9]+$ ]] && (( choice >= 1 && choice <= ${#values[@]} )); then
-        # Schriftgröße anpassen
+        # region Schriftgröße anpassen
         OldValueToChange="SetFontSize 32"
         while true; do
             clear
@@ -322,6 +322,21 @@ while true; do
             fi
             echo
         done
+        # endregion
+        # region Farben anpassen
+        while true; do
+            clear
+            echo "Path of Exile CustomLootFilter Tool"
+            echo "___________________________________"
+            echo
+            read -p "Farben anpassen? For, Abbrechen (a) " fontSize
+            if [[ "$fontSize" == "a" ]]; then
+              break
+              selected+=("${values[choice-1]}") 
+            fi
+            echo
+        done
+        # endregion
         selectedNames+=("${entries[choice-1]},") 
     else
         echo "Ungültige Auswahl. Bitte versuche es erneut."
