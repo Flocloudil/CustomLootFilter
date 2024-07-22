@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# region Variables
 # region Erster Part
 dateiname="Pt1" # Der Dateiname ohne Endung
 dateiname_strict="Pt1_strict" # Der Dateiname ohne Endung
@@ -215,6 +216,7 @@ done
 #"
 #              " # 10
 #)
+# endregion
 # endregion
 
 # region Dateien finden und Inhalt zur Liste hinzufügen
