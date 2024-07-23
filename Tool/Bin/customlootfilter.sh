@@ -354,6 +354,7 @@ while true; do
         primaryColorChoice=0
         secondaryColorChoice=0
         primaryColorCode=""
+        primaryColor=""
         secondaryColorCode=""
         while true; do
           clear
@@ -382,9 +383,11 @@ while true; do
             # region colorChoice primary
             if [[ "$primaryColorChoice" == "1" ]]; then
               primaryColorCode="255 255 255 255"
+              primaryColor="White"
               break
             elif [[ "$primaryColorChoice" == "2" ]]; then
-              primaryColorCode="0 0 0 0"
+              primaryColorCode="0 0 0 255"
+              primaryColor="Grey" # black is not possible
               break
             elif [[ "$primaryColorChoice" == "3" ]]; then
               break
@@ -420,10 +423,10 @@ while true; do
           read -p "Bitte Auswahl eingeben: " secondaryColorChoice
           # region colorChoice secondary
           if [[ "$secondaryColorChoice" == "1" ]]; then
-            primaryColorCode="255 255 255 255"
+            secondaryColorCode="255 255 255 255"
             break
           elif [[ "$secondaryColorChoice" == "2" ]]; then
-            primaryColorCode="0 0 0 0"
+            secondaryColorCode="0 0 0 255"
             break
           elif [[ "$secondaryColorChoice" == "3" ]]; then
             break
@@ -447,7 +450,59 @@ while true; do
         done
         # TODO: Zeilen ersetzen
         # region Exchange color values
-        
+        for value in "${values[@]}"; do
+          if [ "$value" == "${values[choice-1]}" ]; then
+            echo "$choice"
+            read
+            # BackgroundColor
+            OldValueToChange="SetBackgroundColor"
+            changedFilterValue="SetBackgroundColor $primaryColorCode"
+            
+            # Temporäre Datei für Zwischenergebnisse
+            temp_file=$(mktemp)
+            
+            # Verwende perl, um jede Zeile, die den Teilstring enthält, zu ersetzen
+            perl -pe "s/.*$OldValueToChange.*/$changedFilterValue/" "$value" > "$temp_file"
+            
+            # Originaldatei durch die bearbeitete Datei ersetzen
+            mv "$temp_file" "$value"
+            
+            #sed -i "/$OldValueToChange/c\\$changedFilterValue" "$value" # old
+            #value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g") # old
+            #selected+=("$value") # only change the selected array after the last change
+            
+#            # Effect
+#            OldValueToChange="PlayEffect"
+#            changedFilterValue="PlayEffect $primaryColor"
+#            sed -i "/$OldValueToChange/c\\$changedFilterValue" "$value"
+#            #value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g") # old
+#            #selected+=("$value") # only change the selected array after the last change
+#            
+#            # Minimap Icon
+#            OldValueToChange="MinimapIcon"
+#            changedFilterValue="MinimapIcon $primaryColor Hexagon"
+#            sed -i "/$OldValueToChange/c\\$changedFilterValue" "$value"
+#            #value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g") # old
+#            #selected+=("$value") # only change the selected array after the last change
+#            
+#            # Textcolor
+#            OldValueToChange="SetTextColor"
+#            changedFilterValue="SetTextColor $secondaryColorCode"
+#            sed -i "/$OldValueToChange/c\\$changedFilterValue" "$value"
+#            #value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g") # old
+#            #selected+=("$value") # only change the selected array after the last change
+#            
+#            # Bordercolor
+#            OldValueToChange="SetBorderColor"
+#            changedFilterValue="SetBorderColor $secondaryColorCode"
+#            sed -i "/$OldValueToChange/c\\$changedFilterValue" "$value"
+#            #value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g") # old
+#            #selected+=("$value") # only change the selected array after the last change
+#            echo "$value"
+            read
+            selected+=("$value")
+          fi
+        done
         # endregion
         # endregion
         selectedNames+=("${entries[choice-1]},") 
