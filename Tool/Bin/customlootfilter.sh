@@ -349,6 +349,8 @@ while true; do
         done
         # endregion
         # region Farben anpassen
+        dateipfad="Defaults/ColorPatterns.txt"
+        colorList=$(cat "$dateipfad")
         while true; do
             clear
             echo "Path of Exile CustomLootFilter Tool"
@@ -369,10 +371,20 @@ while true; do
               echo
               echo "Primärfarbe auswählen: (Hintergrund, Effekt, MinimapIcon)"
               echo 
-              # TODO: Farben auflisten
-              
-              read
-              break
+              # TODO: if background, set background, else set text and border
+              if [[ $1 == "Background" ]]; then
+                echo "Hintergrundfarbe:"
+              else
+                echo "Schrift- und Rahmenfarbe:"
+              fi
+              echo
+              echo "$colorList"
+              echo
+              read -p "Bitte Auswahl eingeben: " colorChoice
+              if [[ "$colorChoice" == "a" ]]; then
+                read
+                break
+              fi
             fi
         done
         # endregion
