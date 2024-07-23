@@ -351,8 +351,10 @@ while true; do
         # region Farben anpassen
         dateipfad="Defaults/ColorPatterns.txt"
         colorList=$(cat "$dateipfad")
-        primaryColorChoice=0;
-        secondaryColorChoice=0;
+        primaryColorChoice=0
+        secondaryColorChoice=0
+        primaryColorCode=""
+        secondaryColorCode=""
         while true; do
           clear
           echo "Path of Exile CustomLootFilter Tool"
@@ -379,8 +381,10 @@ while true; do
             read -p "Bitte Auswahl eingeben: " primaryColorChoice
             # region colorChoice primary
             if [[ "$primaryColorChoice" == "1" ]]; then
+              primaryColorCode="255 255 255 255"
               break
             elif [[ "$primaryColorChoice" == "2" ]]; then
+              primaryColorCode="0 0 0 0"
               break
             elif [[ "$primaryColorChoice" == "3" ]]; then
               break
@@ -416,8 +420,10 @@ while true; do
           read -p "Bitte Auswahl eingeben: " secondaryColorChoice
           # region colorChoice secondary
           if [[ "$secondaryColorChoice" == "1" ]]; then
+            primaryColorCode="255 255 255 255"
             break
           elif [[ "$secondaryColorChoice" == "2" ]]; then
+            primaryColorCode="0 0 0 0"
             break
           elif [[ "$secondaryColorChoice" == "3" ]]; then
             break
@@ -439,6 +445,10 @@ while true; do
           break
           # endregion
         done
+        # TODO: Zeilen ersetzen
+        # region Exchange color values
+        
+        # endregion
         # endregion
         selectedNames+=("${entries[choice-1]},") 
     else
