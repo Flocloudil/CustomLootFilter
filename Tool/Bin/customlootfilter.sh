@@ -351,41 +351,93 @@ while true; do
         # region Farben anpassen
         dateipfad="Defaults/ColorPatterns.txt"
         colorList=$(cat "$dateipfad")
+        primaryColorChoice=0;
+        secondaryColorChoice=0;
         while true; do
+          clear
+          echo "Path of Exile CustomLootFilter Tool"
+          echo "___________________________________"
+          echo
+          read -p "Farben anpassen? (1), Abbrechen (a) " editColors
+          echo
+          if [[ "$editColors" == "a" ]]; then
+            break
+            selected+=("${values[choice-1]}")
+          elif [[ "$editColors" == "1" ]]; then
+            # Test
+            #echo "MyFunction()" 
+            #MyFunction "$choice" "${values[@]}" "${selected[@]}"
+            while true; do
             clear
             echo "Path of Exile CustomLootFilter Tool"
             echo "___________________________________"
             echo
-            read -p "Farben anpassen? (1), Abbrechen (a) " editColors
+            echo "Primärfarbe auswählen: (Hintergrund, Effekt, MinimapIcon)"
             echo
-            if [[ "$editColors" == "a" ]]; then
+            echo "$colorList"
+            echo
+            read -p "Bitte Auswahl eingeben: " primaryColorChoice
+            # region colorChoice primary
+            if [[ "$primaryColorChoice" == "1" ]]; then
               break
-              selected+=("${values[choice-1]}")
-            elif [[ "$editColors" == "1" ]]; then
-              # Test
-              #echo "MyFunction()" 
-              #MyFunction "$choice" "${values[@]}" "${selected[@]}"
-              clear
-              echo "Path of Exile CustomLootFilter Tool"
-              echo "___________________________________"
-              echo
-              echo "Primärfarbe auswählen: (Hintergrund, Effekt, MinimapIcon)"
-              echo 
-              # TODO: if background, set background, else set text and border
-              if [[ $1 == "Background" ]]; then
-                echo "Hintergrundfarbe:"
-              else
-                echo "Schrift- und Rahmenfarbe:"
-              fi
-              echo
-              echo "$colorList"
-              echo
-              read -p "Bitte Auswahl eingeben: " colorChoice
-              if [[ "$colorChoice" == "a" ]]; then
-                read
-                break
-              fi
+            elif [[ "$primaryColorChoice" == "2" ]]; then
+              break
+            elif [[ "$primaryColorChoice" == "3" ]]; then
+              break
+            elif [[ "$primaryColorChoice" == "4" ]]; then
+              break
+            elif [[ "$primaryColorChoice" == "5" ]]; then
+              break
+            elif [[ "$primaryColorChoice" == "6" ]]; then
+              break
+            elif [[ "$primaryColorChoice" == "7" ]]; then
+              break
+            elif [[ "$primaryColorChoice" == "8" ]]; then
+              break
+            elif [[ "$primaryColorChoice" == "9" ]]; then
+              break
+            elif [[ "$primaryColorChoice" == "10" ]]; then
+              break
             fi
+            # endregion
+          done
+          fi
+          break
+        done
+        while true; do
+          clear
+          echo "Path of Exile CustomLootFilter Tool"
+          echo "___________________________________"
+          echo
+          echo "Sekundärfarbe auswählen: (Text, Rahmen)"
+          echo
+          echo "$colorList"
+          echo
+          read -p "Bitte Auswahl eingeben: " secondaryColorChoice
+          # region colorChoice secondary
+          if [[ "$secondaryColorChoice" == "1" ]]; then
+            break
+          elif [[ "$secondaryColorChoice" == "2" ]]; then
+            break
+          elif [[ "$secondaryColorChoice" == "3" ]]; then
+            break
+          elif [[ "$secondaryColorChoice" == "4" ]]; then
+            break
+          elif [[ "$secondaryColorChoice" == "5" ]]; then
+            break
+          elif [[ "$secondaryColorChoice" == "6" ]]; then
+            break
+          elif [[ "$secondaryColorChoice" == "7" ]]; then
+            break
+          elif [[ "$secondaryColorChoice" == "8" ]]; then
+            break
+          elif [[ "$secondaryColorChoice" == "9" ]]; then
+            break
+          elif [[ "$secondaryColorChoice" == "10" ]]; then
+            break
+          fi
+          break
+          # endregion
         done
         # endregion
         selectedNames+=("${entries[choice-1]},") 
