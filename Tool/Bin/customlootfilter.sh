@@ -219,6 +219,31 @@ done
 # endregion
 # endregion
 
+MyFunction(){
+  # Params:
+  # $1: Choice
+  # $2: Values[]
+  # $3: Selected[]
+  
+  echo "\$1:"
+  echo "$1"
+  echo
+  
+  echo "\$2:"
+  local arr=("$2")
+  for element in "${arr[@]}"; do
+    echo "$element"
+  done
+  echo
+  
+  echo "\$3:"
+  local arr=("$3")
+  for element in "${arr[@]}"; do
+    echo "$element"
+  done
+  echo
+} # Test
+
 # region Dateien finden und Inhalt zur Liste hinzufügen
 verzeichnis="Filters/"
 for datei in "$verzeichnis"/*.txt
@@ -288,14 +313,14 @@ while true; do
             read -p "Schriftgröße anpassen? Klein (1), Mittel (2), Groß (3), Abbrechen (a) " fontSize
             if [[ "$fontSize" == "a" ]]; then
               break
-              selected+=("${values[choice-1]}") 
+              #selected+=("${values[choice-1]}") 
             elif [[ "$fontSize" == "1" ]]; then
               # Set fontSize to small
               changedFilterValue="SetFontSize 18"
               for value in "${values[@]}"; do
                 if [ "$value" == "${values[choice-1]}" ]; then
                   value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
-                  selected+=("$value")
+                  #selected+=("$value")
                 fi
               done
               break
@@ -305,7 +330,7 @@ while true; do
               for value in "${values[@]}"; do
                 if [ "$value" == "${values[choice-1]}" ]; then
                   value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
-                  selected+=("$value")
+                  #selected+=("$value")
                 fi
               done
               break
@@ -315,7 +340,7 @@ while true; do
               for value in "${values[@]}"; do
                 if [ "$value" == "${values[choice-1]}" ]; then
                   value=$(echo "$value" | sed "s/$OldValueToChange/$changedFilterValue/g")
-                  selected+=("$value")
+                  #selected+=("$value")
                 fi
               done
               break
@@ -329,12 +354,26 @@ while true; do
             echo "Path of Exile CustomLootFilter Tool"
             echo "___________________________________"
             echo
-            read -p "Farben anpassen? For, Abbrechen (a) " fontSize
-            if [[ "$fontSize" == "a" ]]; then
-              break
-              selected+=("${values[choice-1]}") 
-            fi
+            read -p "Farben anpassen? (1), Abbrechen (a) " editColors
             echo
+            if [[ "$editColors" == "a" ]]; then
+              break
+              selected+=("${values[choice-1]}")
+            elif [[ "$editColors" == "1" ]]; then
+              # Test
+              #echo "MyFunction()" 
+              #MyFunction "$choice" "${values[@]}" "${selected[@]}"
+              clear
+              echo "Path of Exile CustomLootFilter Tool"
+              echo "___________________________________"
+              echo
+              echo "Primärfarbe auswählen: (Hintergrund, Effekt, MinimapIcon)"
+              echo 
+              # TODO: Farben auflisten
+              
+              read
+              break
+            fi
         done
         # endregion
         selectedNames+=("${entries[choice-1]},") 
