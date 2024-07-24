@@ -1,6 +1,6 @@
 
 
-Show # All Armour Gloves
+Show # All Armour Body Armour
 #Width >= 2
 #Height >= 3
 #AreaLevel >= 0
@@ -14,7 +14,7 @@ Show # All Armour Gloves
 #Corrupted True False
 #Influence True False
 Rarity Normal Magic Rare
-BaseType == "Iron Gauntlets" "Plated Gauntlets" "Bronze Gauntlets" "Steel Gauntlets" "Antique Gauntlets" "Ancient Gauntlets" "Goliath Gauntlets" "Vaal Gauntlets" "Titan Gauntlets" "Taxing Gauntlets" "Gruelling Gauntlets" "Debilitation Gauntlets"
+BaseType == "Plate Vest" "Chestplate" "Copper Plate" "War Plate" "Full Plate" "Arena Plate" "Lordly Plate" "Bronze Plate" "Battle Plate" "Sun Plate" "Colosseum Plate" "Majestic Plate" "Golden Plate" "Crusader Plate" "Astral Plate" "Gladiator Plate" "Glorious Plate" "Kaom's Plate"
 #Class == "" 
 #Sockets >= 3WWW
 SetFontSize 32
